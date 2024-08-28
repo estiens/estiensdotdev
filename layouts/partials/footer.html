@@ -1,0 +1,24 @@
+<footer>
+  <div class="footer p-10 bg-neutral text-neutral-content">
+    <div class="flex justify-between items-center w-full">
+      <span class="headline">
+        <a href="mailto:jobs@ericstiens.dev">jobs@ericstiens.dev</a>
+      </span>
+      <div class="text-sm" x-data="{ currentYear: new Date().getFullYear() }">
+        <span>&copy; <span x-text="currentYear"></span> Eric Stiens. (I mean, sure I guess, but you can plagiarize my
+          resume if you want)</span>
+      </div>
+      <div class="flex space-x-4">
+        <a href="https://github.com/estiens" class="hover:text-accent transition-colors duration-300">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/estiens" class="hover:text-accent transition-colors duration-300">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  {{ $alpine := resources.Get "alpinejs/cdn.min.js" }}
+  <script src="{{ $alpine.RelPermalink }}" defer></script>
+
+</footer>
